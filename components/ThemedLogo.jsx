@@ -1,7 +1,7 @@
 import { Image, useColorScheme } from "react-native";
 
 // logo
-import Logo from "../assets/images/flm-logo.png";
+import Logo from "../assets/images/flm-logo-02.png";
 
 const ThemedLogo = () => {
     const colorScheme = useColorScheme();
