@@ -1,26 +1,33 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import { Link } from "expo-router";
 
-import Logo from "../assets/images/flm-logo.png";
+import ThemedView from "../components/ThemedView";
+import ThemedText from "../components/ThemedText";
+import ThemedLogo from "../components/ThemedLogo";
+import Spacer from "../components/Spacer";
 
 const Home = () => {
     return (
-        <View style={styles.container}>
-            <Image source={Logo} style={styles.img} />
+        <ThemedView style={styles.container}>
+            <ThemedLogo />
+            <Spacer />
 
-            <Text style={styles.title}>Farmer Like Me</Text>
+            <ThemedText style={styles.title} title={true}>
+                Farmer Like Me
+            </ThemedText>
 
-            <Text style={{ marginTop: 10, marginBottom: 30 }}>
+            <ThemedText style={{ marginTop: 10, marginBottom: 30 }}>
                 Growing Together
-            </Text>
+            </ThemedText>
 
             <Link href="/about" style={styles.link}>
-                About
+                <ThemedText>About</ThemedText>
             </Link>
+
             <Link href="/contact" style={styles.link}>
-                Contact
+                <ThemedText>Contact</ThemedText>
             </Link>
-        </View>
+        </ThemedView>
     );
 };
 
@@ -28,7 +35,6 @@ export default Home;
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "#e0dfe8",
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
