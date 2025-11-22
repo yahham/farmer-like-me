@@ -1,4 +1,5 @@
 import { Image, StyleSheet, Text, View } from "react-native";
+import { Link } from "expo-router";
 
 import Logo from "../assets/images/flm-logo.png";
 
@@ -12,6 +13,13 @@ const Home = () => {
             <Text style={{ marginTop: 10, marginBottom: 30 }}>
                 Growing Together
             </Text>
+
+            <Link href="/about" style={styles.link}>
+                About
+            </Link>
+            <Link href="/contact" style={styles.link}>
+                Contact
+            </Link>
         </View>
     );
 };
@@ -31,5 +39,9 @@ const styles = StyleSheet.create({
     title: {
         fontWeight: "bold",
         fontSize: 18,
+    },
+    link: {
+        marginVertical: 10,
+        borderBottomWidth: 1,
     },
 });
